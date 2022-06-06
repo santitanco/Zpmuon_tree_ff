@@ -121,29 +121,127 @@ ymtau = Parameter(name = 'ymtau',
                   lhablock = 'YUKAWA',
                   lhacode = [ 15 ])
 
-gmu = Parameter(name = 'gmu',
-                nature = 'external',
-                type = 'real',
-                value = 0.46,
-                texname = 'g_{\\mu }',
-                lhablock = 'FRBlock',
-                lhacode = [ 1 ])
-
-gchi = Parameter(name = 'gchi',
-                 nature = 'external',
-                 type = 'real',
-                 value = 0.1,
-                 texname = 'g_{\\chi }',
-                 lhablock = 'FRBlock',
-                 lhacode = [ 2 ])
+### External BSM coupling and charges
 
 gp = Parameter(name = 'gp',
                  nature = 'external',
                  type = 'real',
                  value = 1,
-                 texname = 'g\'',
+                 texname = "g\'",
                  lhablock = 'FRBlock',
-                 lhacode = [ 3 ])
+                 lhacode = [ 1 ])
+
+qmu = Parameter(name = 'gp',
+                 nature = 'external',
+                 type = 'real',
+                 value = 1,
+                 texname = 'Q_{\\mu}',
+                 lhablock = 'FRBlock',
+                 lhacode = [ 2 ])
+
+qchi = Parameter(name = 'gp',
+                 nature = 'external',
+                 type = 'real',
+                 value = 1,
+                 texname = 'Q_{\\chi}',
+                 lhablock = 'FRBlock',
+                 lhacode = [ 3 ])                
+
+### Fermion couplings to Z'
+
+gmu = Parameter(name = 'gmu',
+                nature = 'internal',
+                type = 'real',
+                value = 'gp*qmu',
+                texname = 'g_{\\mu }')
+
+gchi = Parameter(name = 'gchi',
+                 nature = 'internal',
+                 type = 'real',
+                 value = 'gp*qchi',
+                 texname = 'g_{\\chi }')
+
+
+### Anomalous coefficients and integrals
+
+tZpZZmu = Parameter(name = 'tZpZZmu',
+                 nature = 'internal',
+                 type = 'real',
+                 value = '(2*(-1/2 + 2*sw2)**2+1/2)*qmu',
+                 texname = 't^{Z\'ZZ}_{\\mu }')
+
+tZpZZnumu = Parameter(name = 'tZpZZnumu',
+                 nature = 'internal',
+                 type = 'real',
+                 value = 'qmu',
+                 texname = 't^{Z\'ZZ}_{\\nu_{\\mu} }')              
+
+# Muon loop integrals
+
+I3ZZmu = Parameter(name = 'I3ZZmu',
+                 nature = 'external',
+                 type = 'real',
+                 value = 1,
+                 texname = 'I_{3,\\mu}^{ZZ}')
+
+I6ZZmu = Parameter(name = 'I3ZZmu',
+                 nature = 'internal',
+                 type = 'real',
+                 value = '-I3ZZmu',
+                 texname = 'I_{6,\\mu}^{ZZ}')
+
+I5ZZmu = Parameter(name = 'I5ZZmu',
+                 nature = 'external',
+                 type = 'real',
+                 value = 1,
+                 texname = 'I_{3,\\mu}^{ZZ}')
+
+I4ZZmu = Parameter(name = 'I3ZZmu',
+                 nature = 'internal',
+                 type = 'real',
+                 value = '-I4ZZmu',
+                 texname = 'I_{4,\\mu}^{ZZ}')              
+
+I0ZZmu = Parameter(name = 'I0ZZmu',
+                 nature = 'external',
+                 type = 'real',
+                 value = 1,
+                 texname = 'I_{3,\\mu}^{ZZ}')
+
+# Neutrino loop integrals
+
+I3ZZnumu = Parameter(name = 'I3ZZnumu',
+                 nature = 'external',
+                 type = 'real',
+                 value = 1,
+                 texname = 'I_{3,\\mu}^{ZZ}')
+
+I6ZZnumu = Parameter(name = 'I3ZZnumu',
+                 nature = 'internal',
+                 type = 'real',
+                 value = '-I3ZZmu',
+                 texname = 'I_{6,\\mu}^{ZZ}')
+
+I5ZZnumu = Parameter(name = 'I5ZZnumu',
+                 nature = 'external',
+                 type = 'real',
+                 value = 1,
+                 texname = 'I_{3,\\mu}^{ZZ}')
+
+I4ZZnumu = Parameter(name = 'I3ZZnumu',
+                 nature = 'internal',
+                 type = 'real',
+                 value = '-I4ZZmu',
+                 texname = 'I_{4,\\mu}^{ZZ}')              
+
+I0ZZnumu = Parameter(name = 'I0ZZnumu',
+                 nature = 'external',
+                 type = 'real',
+                 value = 1,
+                 texname = 'I_{3,\\mu}^{ZZ}')
+
+
+
 
 A1t = Parameter(name = 'A1t',
                  nature = 'external',
@@ -152,6 +250,12 @@ A1t = Parameter(name = 'A1t',
                  texname = '\tilde{A}_1',
                  lhablock = 'FRBlock',
                  lhacode = [ 4 ])           
+
+
+
+
+
+### SM
 
 MZ = Parameter(name = 'MZ',
                nature = 'external',

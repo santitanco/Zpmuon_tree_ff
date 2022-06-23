@@ -480,11 +480,5 @@ V_78 = Vertex(name = 'V_78',
 V_79 = Vertex(name = 'V_79',
               particles = [ P.Zpmu, P.Z, P.Z ],
               color = [ '1' ],
-              lorentz = [ L.VVV2 ],
-              couplings = {(0,0):C.GC_60})
-
-# V_79 = Vertex(name = 'V_79',
-#               particles = [ P.Zpmu, P.Z, P.Z ],
-#               color = [ '1' ],
-#               lorentz = [ L.VVV2, L.VVV3, L.VVV4, L.VVV5, L.VVV6, L.VVV7 ],
-#               couplings = {(0,0):C.GC_60, (0,1): C.GC_61, (0,2): C.GC_62, (0,3): C.GC_63, (0,4): C.GC_64, (0,5): C.GC_65})
+              lorentz = [ L.VVV2, L.VVV3, L.VVV4, L.VVV5, L.VVV6, L.VVV7 ],
+              couplings = {(0,0):C.GC_60, (0,1): C.GC_61, (0,2): C.GC_62, (0,3): C.GC_63, (0,4): C.GC_64, (0,5): C.GC_65})

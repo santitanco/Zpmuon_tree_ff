@@ -618,11 +618,11 @@ A6 = Parameter(name = 'A6',
 A1t = Parameter(name = 'A1t',
                  nature = 'internal',
                  type = 'real',
-                 value = 'MZ**2 * A4 + (MZpmu**2-2*MZ**2)/2 * A3 - tZpZZmu*MMU**2*I0ZZmu',
+                 value = 'MZ**2 * A4 + (MZpmu**2-2.*MZ**2)/2. * A3 - tZpZZmu*MMU**2*I0ZZmu',   # tesis eq. (5.65)
                  texname = '\tilde{A}_1')           
 
 A2t = Parameter(name = 'A2t',
                  nature = 'internal',
                  type = 'real',
-                 value = 'MZ**2 * A5 + (MZpmu**2-2*MZ**2)/2 * A6 + tZpZZmu*MMU**2*I0ZZmu',
+                 value = 'MZ**2 * A5 + (MZpmu**2-2.*MZ**2)/2. * A6 + tZpZZmu*MMU**2*I0ZZmu',   # tesis eq. (5.66)
                  texname = '\tilde{A}_2')

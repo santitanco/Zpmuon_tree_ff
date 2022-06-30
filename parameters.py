@@ -508,7 +508,8 @@ tZpZZnumu = Parameter(name = 'tZpZZnumu',
                  nature = 'internal',
                  type = 'real',
                  value = 'qmu',                             # eq. (49) paper
-                 texname = 't^{Z\'ZZ}_{\\nu_{\\mu} }')              
+                 texname = 't^{Z\'ZZ}_{\\nu_{\\mu} }')         
+
 
 # Muon loop integrals in the on-shell case
 

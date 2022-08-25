@@ -501,13 +501,14 @@ gchi = Parameter(name = 'gchi',
 tZpZZmu = Parameter(name = 'tZpZZmu',
                  nature = 'internal',
                  type = 'real',
-                 value = '(2.*(-1./2. + 2.*sw2)**2+1./2.)*qmu',    # eq. (48) paper
+                 value = '2*qmu*(-1./2. + 2.*sw2)**2 + qmu/2 ',    # eq. (D.82) Racioppi thesis with v_mu^Z'=0
+                #  value = '(2.*(-1./2. + 2.*sw2)**2+1./2.)*qmu',    # eq. (48) paper (idem D.82)
                  texname = 't^{Z\'ZZ}_{\\mu }')
 
 tZpZZnumu = Parameter(name = 'tZpZZnumu',
                  nature = 'internal',
                  type = 'real',
-                 value = 'qmu',                             # eq. (49) paper
+                 value = 'qmu',                             # eq. (49) paper (idem D.82)
                  texname = 't^{Z\'ZZ}_{\\nu_{\\mu} }')         
 
 
@@ -590,40 +591,44 @@ I0ZZnumu = Parameter(name = 'I0ZZnumu',
 
 # Rosenberg parametrization coefficients (already on-shell)
 
-
+# eq. (D.81) thesis
 
 A3 = Parameter(name = 'A3',
                  nature = 'internal',
                  type = 'real',
-                 value = '2*(tZpZZmu*I3ZZmu+tZpZZnumu*I3ZZnumu)',
+                 value = 'tZpZZmu*I3ZZmu+tZpZZnumu*I3ZZnumu',
                  texname = 'A_3')
                 
 A4 = Parameter(name = 'A4',
                  nature = 'internal',
                  type = 'real',
-                 value = '2*(tZpZZmu*I4ZZmu+tZpZZnumu*I4ZZnumu)',
+                 value = 'tZpZZmu*I4ZZmu+tZpZZnumu*I4ZZnumu',
                  texname = 'A_4')
 
 A5 = Parameter(name = 'A5',
                  nature = 'internal',
                  type = 'real',
-                 value = '2*(tZpZZmu*I5ZZmu+tZpZZnumu*I5ZZnumu)',
+                 value = 'tZpZZmu*I5ZZmu+tZpZZnumu*I5ZZnumu',
                  texname = 'A_5')
 
 A6 = Parameter(name = 'A6',
                  nature = 'internal',
                  type = 'real',
-                 value = '2*(tZpZZmu*I6ZZmu+tZpZZnumu*I6ZZnumu)',
+                 value = 'tZpZZmu*I6ZZmu+tZpZZnumu*I6ZZnumu',
                  texname = 'A_6')                 
+
+# eqs. (D.88) and (D.89) with Z and Z' on-shell
 
 A1t = Parameter(name = 'A1t',
                  nature = 'internal',
                  type = 'real',
-                 value = 'MZ**2 * A4 + (MZpmu**2-2.*MZ**2)/2. * A3 - tZpZZmu*MMU**2*I0ZZmu',   # tesis eq. (5.65)
+                #  value = 'MZ**2 * A4 + (MZpmu**2-2.*MZ**2)/2. * A3 - tZpZZmu*MMU**2*I0ZZmu',   # tesis eq. (5.65)
+                 value = 'MZ**2 * A4 + (MZpmu**2-2.*MZ**2)/2. * A3 - (1./3.*2*qmu/4.) * MMU**2*I0ZZmu',  
                  texname = '\tilde{A}_1')           
 
 A2t = Parameter(name = 'A2t',
                  nature = 'internal',
                  type = 'real',
-                 value = 'MZ**2 * A5 + (MZpmu**2-2.*MZ**2)/2. * A6 + tZpZZmu*MMU**2*I0ZZmu',   # tesis eq. (5.66)
+                #  value = 'MZ**2 * A5 + (MZpmu**2-2.*MZ**2)/2. * A6 + tZpZZmu*MMU**2*I0ZZmu',   # tesis eq. (5.66)
+                 value = 'MZ**2 * A5 + (MZpmu**2-2.*MZ**2)/2. * A6 + (1./3.*2*qmu/4.) * MMU**2*I0ZZmu',
                  texname = '\tilde{A}_2')

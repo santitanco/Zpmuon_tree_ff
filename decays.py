@@ -105,7 +105,7 @@ Decay_Zpmu = Decay(name = 'Decay_Zpmu',
                    partial_widths = {(P.P__tilde__ch,P.P__tilde__CH):'((8*gchi**2*MCh**2 + 4*gchi**2*MZpmu**2)*cmath.sqrt(-4*MCh**2*MZpmu**2 + MZpmu**4))/(48.*cmath.pi*abs(MZpmu)**3)',
                                      (P.mu__minus__,P.mu__plus__):'((-16*gmu**2*MMU**2 + 4*gmu**2*MZpmu**2)*cmath.sqrt(-4*MMU**2*MZpmu**2 + MZpmu**4))/(48.*cmath.pi*abs(MZpmu)**3)',
                                      (P.vm,P.vm__tilde__):'(gmu**2*MZpmu**4)/(24.*cmath.pi*abs(MZpmu)**3)',
-                                     (P.Z,P.Z): '(MZpmu/2.)*cmath.sqrt(1-4*(MZ**2)/(MZpmu**2))/(64*cmath.pi**2*MZpmu**2) * 4*cmath.pi * gp**2*gZ**4 / (192*cmath.pi**4*MZ**2) * (MZpmu**2-4*MZ**2)**2 * ( (tZpZZmu*(I3ZZmu+I5ZZmu) + tZpZZnumu*(I3ZZnumu+I5ZZnumu))*MZ**2 + (1./3.*2*qmu/4.) * MMU**2*I0ZZmu )**2'
-                                    #  (P.Z, P.Z):'(tZpZZmu*(I3ZZmu+I5ZZmu))'# + tZpZZnumu*(I3ZZnumu+I5ZZnumu))*MZpmu**2 + tZpZZmu*I0ZZmu*MMU**2 '
+                                     (P.Z,P.Z): '(MZpmu/2.)*cmath.sqrt(1-4*(MZ**2)/(MZpmu**2))/(64*cmath.pi**2*MZpmu**2) * 4*cmath.pi * gp**2*gZ**4 / (192*cmath.pi**4*MZ**2) * (MZpmu**2-4*MZ**2)**2 * ( (tZpZZmu*(I3ZZmu+I5ZZmu) + tZpZZnumu*(I3ZZnumu+I5ZZnumu))*MZ**2 + (1./3.*2*qmu/4.) * MMU**2*I0ZZmu )**2',
+                                     (P.Z,P.a): '(MZpmu**2-MZ**2)/(2*MZpmu) * 1/(32*cmath.pi**2*MZpmu**2) * 4*cmath.pi * gp**2*gZ**2*ee**2 * ((MZpmu**2-MZ**2)**2*(MZpmu**2+MZ**2))/(96*cmath.pi**4*MZpmu**2*MZ**2) * (tZpZgammamu*(I3Zgammamu+I5Zgammamu)*MZ**2)**2'
                                      })
 

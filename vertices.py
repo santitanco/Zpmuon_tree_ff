@@ -482,3 +482,9 @@ V_79 = Vertex(name = 'V_79',
               color = [ '1' ],
               lorentz = [ L.VVV2, L.VVV3, L.VVV4, L.VVV5, L.VVV6, L.VVV7 ],
               couplings = {(0,0):C.GC_60, (0,1): C.GC_61, (0,2): C.GC_62, (0,3): C.GC_63, (0,4): C.GC_64, (0,5): C.GC_65})
+
+V_80 = Vertex(name = 'V_80',
+              particles = [ P.Zpmu, P.Z, P.a ],
+              color = [ '1' ],
+              lorentz = [ L.VVV2, L.VVV3, L.VVV4, L.VVV5, L.VVV6, L.VVV7 ],
+              couplings = {(0,0):C.GC_66, (0,1): C.GC_67, (0,2): C.GC_68, (0,3): C.GC_69, (0,4): C.GC_70, (0,5): C.GC_71})

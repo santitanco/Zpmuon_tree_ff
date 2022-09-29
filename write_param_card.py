@@ -178,11 +178,5 @@ class ParamCardWriter(object):
             
 if '__main__' == __name__:
     ParamCardWriter('./param_card.dat', generic=True)
-    from parameters import all_parameters
-    list_params_names = ['gZ', 'gmu', 'gchi', 'tZpZZmu', 'tZpZZnumu']
-    list_of_parameters = [param for param in all_parameters if param.name in list_params_names]
-    # print(set([param.lhablock for param in list_of_parameters]))
-    
-    # ParamCardWriter('./internal_params.dat', list_of_parameters=list_of_parameters)
     print('write ./param_card.dat')
     

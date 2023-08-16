@@ -43,19 +43,19 @@ GC_8 = Coupling(name = 'GC_8',
 
 GC_9 = Coupling(name = 'GC_9',
                 value = 'complex(0,1)*gchi',
-                order = {'NP':2})
+                order = {'NP':1})
 
 GC_10 = Coupling(name = 'GC_10',
                  value = '-(complex(0,1)*gmu)/2.',
-                 order = {'NP':2})
+                 order = {'NP':1})
 
 GC_11 = Coupling(name = 'GC_11',
                  value = '(complex(0,1)*gmu)/2.',
-                 order = {'NP':2})
+                 order = {'NP':1})
 
 GC_12 = Coupling(name = 'GC_12',
                  value = 'complex(0,1)*gmu',
-                 order = {'NP':2})
+                 order = {'NP':1})
 
 GC_13 = Coupling(name = 'GC_13',
                  value = '-6*complex(0,1)*lam',
@@ -247,48 +247,48 @@ GC_59 = Coupling(name = 'GC_59',
 
 GC_60 = Coupling(name = 'GC_60',
                  value = '-1/(8*cmath.pi**2)*gp*gZ**2*A1t',
-                 order = {'NP':2})
+                 order = {'NP':1})
 
 GC_61 = Coupling(name = 'GC_61',
                  value = '-1/(8*cmath.pi**2)*gp*gZ**2*A2t',
-                 order = {'NP':2})
+                 order = {'NP':1})
 
 GC_62 = Coupling(name = 'GC_62',
                  value = '-1/(8*cmath.pi**2)*gp*gZ**2*A3',
-                 order = {'NP':2})
+                 order = {'NP':1})
 
 GC_63 = Coupling(name = 'GC_63',
                  value = '-1/(8*cmath.pi**2)*gp*gZ**2*A4',
-                 order = {'NP':2})
+                 order = {'NP':1})
 
 GC_64 = Coupling(name = 'GC_64',
                  value = '-1/(8*cmath.pi**2)*gp*gZ**2*A5',
-                 order = {'NP':2})
+                 order = {'NP':1})
 
 GC_65 = Coupling(name = 'GC_65',
                  value = '-1/(8*cmath.pi**2)*gp*gZ**2*A6',
-                 order = {'NP':2})                                                   
+                 order = {'NP':1})                                                   
 
 GC_66 = Coupling(name = 'GC_66',
                  value = '-1/(4*cmath.pi**2)*gp*gZ*ee*A1tgam',
-                 order = {'NP':2})
+                 order = {'NP':1})
 
 GC_67 = Coupling(name = 'GC_67',
                  value = '-1/(4*cmath.pi**2)*gp*gZ*ee*A2tgam',
-                 order = {'NP':2})
+                 order = {'NP':1})
 
 GC_68 = Coupling(name = 'GC_68',
                  value = '-1/(4*cmath.pi**2)*gp*gZ*ee*A3gam',
-                 order = {'NP':2})
+                 order = {'NP':1})
 
 GC_69 = Coupling(name = 'GC_69',
                  value = '-1/(4*cmath.pi**2)*gp*gZ*ee*A4gam',
-                 order = {'NP':2})
+                 order = {'NP':1})
 
 GC_70 = Coupling(name = 'GC_70',
                  value = '-1/(4*cmath.pi**2)*gp*gZ*ee*A5gam',
-                 order = {'NP':2})
+                 order = {'NP':1})
 
 GC_71 = Coupling(name = 'GC_71',
                  value = '-1/(4*cmath.pi**2)*gp*gZ*ee*A6gam',
-                 order = {'NP':2})    
+                 order = {'NP':1})    

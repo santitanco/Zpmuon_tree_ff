@@ -601,7 +601,15 @@ I0ZZnumu = Parameter(name = 'I0ZZnumu',
                  lhacode = [ 13 ])
 
 
-# Rosenberg parametrization coefficients (already on-shell)
+# Rosenberg parametrization coefficients (either on-shell or defined by fixed s value)
+
+sqrts = Parameter(name = 'sqrts',
+                  nature = 'external',
+                  type = 'real',
+                  value = 200,
+                  texname = '\\sqrt{s}',
+                  lhablock = 'FRBlock',
+                   lhacode = [ 19 ] )
 
 # eq. (D.81) thesis
 
@@ -635,14 +643,14 @@ A1t = Parameter(name = 'A1t',
                  nature = 'internal',
                  type = 'real',
                 #  value = 'MZ**2 * A4 + (MZpmu**2-2.*MZ**2)/2. * A3 - tZpZZmu*MMU**2*I0ZZmu',   # tesis eq. (5.65)
-                 value = 'MZ**2 * A4 + (MZpmu**2-2.*MZ**2)/2. * A3 - (1./3.*2*qmu/4.) * MMU**2*I0ZZmu',  
+                 value = 'MZ**2 * A4 + (sqrts**2-2.*MZ**2)/2. * A3 - (1./3.*2*qmu/4.) * MMU**2*I0ZZmu',  
                  texname = '\tilde{A}_1')           
 
 A2t = Parameter(name = 'A2t',
                  nature = 'internal',
                  type = 'real',
                 #  value = 'MZ**2 * A5 + (MZpmu**2-2.*MZ**2)/2. * A6 + tZpZZmu*MMU**2*I0ZZmu',   # tesis eq. (5.66)
-                 value = 'MZ**2 * A5 + (MZpmu**2-2.*MZ**2)/2. * A6 + (1./3.*2*qmu/4.) * MMU**2*I0ZZmu',
+                 value = 'MZ**2 * A5 + (sqrts**2-2.*MZ**2)/2. * A6 + (1./3.*2*qmu/4.) * MMU**2*I0ZZmu',
                  texname = '\tilde{A}_2')
 
 ## Z'Zgamma coupling
@@ -721,14 +729,14 @@ A1tgam = Parameter(name = 'A1tgam',
                  nature = 'internal',
                  type = 'real',
                 #  value = 'MZ**2 * A4 + (MZpmu**2-2.*MZ**2)/2. * A3 - tZpZZmu*MMU**2*I0ZZmu',   # tesis eq. (5.65)
-                 value = '(MZpmu**2-MZ**2)/2. * A3gam',  
+                 value = '(sqrts**2-MZ**2)/2. * A3gam',  
                  texname = '\tilde{A}^\gamma_1')           
 
 A2tgam = Parameter(name = 'A2tgam',
                  nature = 'internal',
                  type = 'real',
                 #  value = 'MZ**2 * A5 + (MZpmu**2-2.*MZ**2)/2. * A6 + tZpZZmu*MMU**2*I0ZZmu',   # tesis eq. (5.66)
-                 value = 'MZ**2 * A5gam + (MZpmu**2-MZ**2)/2. * A6gam',
+                 value = 'MZ**2 * A5gam + (sqrts**2-MZ**2)/2. * A6gam',
                  texname = '\tilde{A}^\gamma_2')
 
 

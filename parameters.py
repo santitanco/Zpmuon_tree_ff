@@ -784,3 +784,159 @@ A2tgam = Parameter(name = 'A2tgam',
                  texname = '\tilde{A}^\gamma_2')
 
 
+## Z'W+W- coupling
+
+# Muon loop integrals in the on-shell case
+
+I3WWmu = Parameter(name = 'I3WWmu',
+                 nature = 'external',
+                 type = 'real',
+                 value = 1,
+                 texname = 'I_{3,\\mu}^{WW}',
+                 lhablock = 'FRBlock',
+                 lhacode = [ 4 ])
+
+I4WWmu = Parameter(name = 'I4WWmu',
+                 nature = 'external',
+                 type = 'real',
+                 value = 1,
+                 texname = 'I_{4,\\mu}^{WW}',
+                 lhablock = 'FRBlock',
+                 lhacode = [ 5 ])
+
+I5WWmu = Parameter(name = 'I5WWmu',
+                 nature = 'external',
+                 type = 'real',
+                 value = 1,
+                 texname = 'I_{5,\\mu}^{WW}',
+                 lhablock = 'FRBlock',
+                 lhacode = [ 6 ])
+
+I6WWmu = Parameter(name = 'I6WWmu',
+                 nature = 'external',
+                 type = 'real',
+                 value = 1,
+                 texname = 'I_{6,\\mu}^{WW}',
+                 lhablock = 'FRBlock',
+                 lhacode = [ 7 ])          
+
+I0WWmu = Parameter(name = 'I0WWmu',
+                 nature = 'external',
+                 type = 'real',
+                 value = 1,
+                 texname = 'I_{0,\\mu}^{WW}',
+                 lhablock = 'FRBlock',
+                 lhacode = [ 8 ])
+
+# Neutrino loop integrals
+
+I3ZZnumu = Parameter(name = 'I3ZZnumu',
+                 nature = 'external',
+                 type = 'real',
+                 value = 1,
+                 texname = 'I_{3, \\nu_{\\mu}}^{ZZ}',
+                 lhablock = 'FRBlock',
+                 lhacode = [ 9 ])
+
+I4ZZnumu = Parameter(name = 'I4ZZnumu',
+                 nature = 'external',
+                 type = 'real',
+                 value = 1,
+                 texname = 'I_{4, \\nu_{\\mu}}^{ZZ}',
+                 lhablock = 'FRBlock',
+                 lhacode = [ 10 ])
+
+I5ZZnumu = Parameter(name = 'I5ZZnumu',
+                 nature = 'external',
+                 type = 'real',
+                 value = 1,
+                 texname = 'I_{5, \\nu_{\\mu}}^{ZZ}',
+                 lhablock = 'FRBlock',
+                 lhacode = [ 11 ])
+
+I6ZZnumu = Parameter(name = 'I6ZZnumu',
+                 nature = 'external',
+                 type = 'real',
+                 value = 1,
+                 texname = 'I_{6, \\nu_{\\mu}}^{ZZ}',
+                 lhablock = 'FRBlock',
+                 lhacode = [ 12 ])          
+
+I0ZZnumu = Parameter(name = 'I0ZZnumu',
+                 nature = 'external',
+                 type = 'real',
+                 value = 1,
+                 texname = 'I_{0, \\nu_{\\mu}}^{ZZ}',
+                 lhablock = 'FRBlock',
+                 lhacode = [ 13 ])
+
+
+# Rosenberg parametrization coefficients (either on-shell or defined by fixed s value)
+
+pZZsqr = Parameter(name = 'pZZsqr',
+                  nature = 'external',
+                  type = 'real',
+                  value = 200,
+                  texname = 'p^2',
+                  lhablock = 'FRBlock',
+                   lhacode = [ 19 ] )
+
+qZZsqr = Parameter(name = 'qZZsqr',
+                  nature = 'external',
+                  type = 'real',
+                  value = 200,
+                  texname = 'q^2',
+                  lhablock = 'FRBlock',
+                   lhacode = [ 20 ] )
+
+pqZZ = Parameter(name = 'pqZZ',
+                  nature = 'external',
+                  type = 'real',
+                  value = 200,
+                  texname = 'p\\cdot q',
+                  lhablock = 'FRBlock',
+                   lhacode = [ 21 ] )
+
+# eq. (D.81) thesis
+
+A3 = Parameter(name = 'A3',
+                 nature = 'internal',
+                 type = 'real',
+                 value = 'tZpZZmu*I3ZZmu+tZpZZnumu*I3ZZnumu',
+                 texname = 'A_3')
+                
+A4 = Parameter(name = 'A4',
+                 nature = 'internal',
+                 type = 'real',
+                 value = 'tZpZZmu*I4ZZmu+tZpZZnumu*I4ZZnumu',
+                 texname = 'A_4')
+
+A5 = Parameter(name = 'A5',
+                 nature = 'internal',
+                 type = 'real',
+                 value = 'tZpZZmu*I5ZZmu+tZpZZnumu*I5ZZnumu',
+                 texname = 'A_5')
+
+A6 = Parameter(name = 'A6',
+                 nature = 'internal',
+                 type = 'real',
+                 value = 'tZpZZmu*I6ZZmu+tZpZZnumu*I6ZZnumu',
+                 texname = 'A_6')                 
+
+# eqs. (D.88) and (D.89) with Z and Z' on-shell
+
+A1t = Parameter(name = 'A1t',
+                 nature = 'internal',
+                 type = 'real',
+                #  value = 'MZ**2 * A4 + (MZpmu**2-2.*MZ**2)/2. * A3 - tZpZZmu*MMU**2*I0ZZmu',   # tesis eq. (5.65)
+                #  value = 'MZ**2 * A4 + (sqrts**2-2.*MZ**2)/2. * A3 - (1./3.*2*qmu/4.) * MMU**2*I0ZZmu',  
+                 value = 'qZZsqr * A4 + pqZZ * A3 - (1./3.*2*qmu/4.) * MMU**2*I0ZZmu',  
+                 texname = '\tilde{A}_1')           
+
+A2t = Parameter(name = 'A2t',
+                 nature = 'internal',
+                 type = 'real',
+                #  value = 'MZ**2 * A5 + (MZpmu**2-2.*MZ**2)/2. * A6 + tZpZZmu*MMU**2*I0ZZmu',   # tesis eq. (5.66)
+                #  value = 'MZ**2 * A5 + (sqrts**2-2.*MZ**2)/2. * A6 + (1./3.*2*qmu/4.) * MMU**2*I0ZZmu',
+                 value = 'pZZsqr * A5 + pqZZ * A6 + (1./3.*2*qmu/4.) * MMU**2*I0ZZmu',
+                 texname = '\tilde{A}_2')

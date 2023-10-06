@@ -292,3 +292,27 @@ GC_70 = Coupling(name = 'GC_70',
 GC_71 = Coupling(name = 'GC_71',
                  value = '-1/(4*cmath.pi**2)*gp*gZ*ee*A6gam',
                  order = {'NP':2})    
+
+GC_72 = Coupling(name = 'GC_72',
+                 value = '-1/(4*cmath.pi**2)*gp*gZ*ee*A1tgam',
+                 order = {'NP':2})
+
+GC_73 = Coupling(name = 'GC_73',
+                 value = '-1/(4*cmath.pi**2)*gp*gZ*ee*A2tgam',
+                 order = {'NP':2})
+
+GC_74 = Coupling(name = 'GC_74',
+                 value = '-1/(4*cmath.pi**2)*gp*gZ*ee*A3gam',
+                 order = {'NP':2})
+
+GC_75 = Coupling(name = 'GC_75',
+                 value = '-1/(4*cmath.pi**2)*gp*gZ*ee*A4gam',
+                 order = {'NP':2})
+
+GC_76 = Coupling(name = 'GC_76',
+                 value = '-1/(4*cmath.pi**2)*gp*gZ*ee*A5gam',
+                 order = {'NP':2})
+
+GC_77 = Coupling(name = 'GC_77',
+                 value = '-1/(4*cmath.pi**2)*gp*gZ*ee*A6gam',
+                 order = {'NP':2})  
